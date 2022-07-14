@@ -6,6 +6,7 @@
     <button @click="search">검색</button>
   </div>
   <rank-table :list="list" /> 
+  <!-- v-bind: list 와 같음 -->
 </div>
 </template>
 
@@ -16,9 +17,9 @@ export default {
   components: {
     RankTable
   },
-  data() {
+   data() {
     return{
-      title: 'BoxOfficeByDay',
+      title: 'BoxOfficeByWeek',
       selectedDate: '',
       list: []
     }
@@ -29,8 +30,9 @@ export default {
       this.getData(targetDt);
     },
     async getData(targetDt) {
-      const data = await this.getBoxOfficeByDay(targetDt)
-      this.list = data.boxOfficeResult.dailyBoxOfficeList;
+      const data = await this.getBoxOfficeByWeek(targetDt)
+      console.log(data);
+      this.list = data.boxOfficeResult.weeklyBoxOfficeList;
     }
   },
   created() {
