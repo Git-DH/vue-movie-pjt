@@ -35,10 +35,12 @@ export default {
                 case 'boxOfficeByDay':                    
                     this.list = (await this.getBoxOfficeByDay(targetDt))
                                 .boxOfficeResult.dailyBoxOfficeList;
+                    this.search();
                     break;
                 case 'boxOfficeByWeek':                    
                     this.list = (await this.getBoxOfficeByWeek(targetDt))
                                 .boxOfficeResult.weeklyBoxOfficeList;
+                    this.search();
                     break;
             }
         },

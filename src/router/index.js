@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home';
-import BoxOfficeByDay from '../views/BoxOfficeByDay';
-import BoxOfficeByWeek from '../views/BoxOfficeByWeek';
 import BoxOffice from '../views/BoxOffice';
+// import BoxOfficeByDay from '../views/BoxOfficeByDay';
+// import BoxOfficeByWeek from '../views/BoxOfficeByWeek';
 
 
 const routes = [
